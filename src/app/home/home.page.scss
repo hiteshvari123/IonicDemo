@@ -1,27 +1,18 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.rowHeader{
+  padding: 16px;
+  padding-bottom: 0px;
+  font-weight: bold;
+  color: black;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.titleCol{
+  margin-left: 12px;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.fabCol{
+  display: contents;
 }
-
-#container a {
-  text-decoration: none;
+.fabBtn{
+  width: 40px;
+  height: 40px;
+  margin-top: 12px;
+  margin-right: 12px;
 }

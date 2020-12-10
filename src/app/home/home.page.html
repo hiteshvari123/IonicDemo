@@ -1,20 +1,68 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Employee
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Employee</ion-title>
+      <ion-fab-button>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
+    <ion-row>
+      <ion-col class="titleCol">
+        <h4>Employee List</h4>
+      </ion-col>
+      <ion-col class="fabCol">
+        <ion-fab-button class="fabBtn" (click)="addEmp()">
+          <ion-icon name="add-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-col>
+    </ion-row>     
+
+    <ion-card>
+      <ion-row class="rowHeader">
+        <ion-col>
+          Name
+        </ion-col>
+        <ion-col>
+          Email
+        </ion-col>
+        <ion-col>
+          Phone
+        </ion-col>
+        <ion-col>
+          Address
+        </ion-col>
+      </ion-row>
+
+      <ion-card-content>
+        <div *ngFor="let data of rows">
+          <ion-row (click)="empDetails(data)">
+            <ion-col>
+              {{data?.name}}
+            </ion-col>
+            <ion-col>
+              {{data?.email}}
+            </ion-col>
+            <ion-col>
+              {{data?.phone}}
+            </ion-col>
+            <ion-col>
+              {{data?.address}}
+            </ion-col>
+          </ion-row>
+         
+        </div>
+      </ion-card-content>
+    
+    </ion-card>
 </ion-content>
